@@ -1,10 +1,9 @@
 // Dummy JavaScript utility functions
 
-function dummyFunction() {
-    console.log("This is a dummy function");
-    return "dummy result";
+function additionFunction(a, b) {
+    return a + b;
 }
 
-const dummyConstant = "dummy value";
+const dummyConstant = "Addition";
 
-export { dummyFunction, dummyConstant };
+export { additionFunction, dummyConstant };
