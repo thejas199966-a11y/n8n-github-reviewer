@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Login.css';
+import { validateUser } from './forms/utility';
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -7,8 +8,13 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle login logic here
-    console.log('Login attempt:', { email, password });
+    const isValid = validateUser(email, password);
+    console.log('Login validation result:', isValid);
+    if (isValid) {
+      console.log('Login successful');
+    } else {
+      console.log('Login failed');
+    }
   };
 
   return (
